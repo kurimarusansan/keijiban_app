@@ -1,0 +1,11 @@
+<h1>新規投稿ページ</h1>
+
+<!--<form action="/posts" method="post">-->
+<!--    <input type="text" name="memotext" placeholder="投稿してください">-->
+<!--    <input type="submit" value="送信する">-->
+<!--</form>-->
+
+<%= form_with url:"/posts", method: :post, local: true do |form| %>
+    <%= form.text_field :memotext %>
+    <%= form.submit '投稿する' %>
+<% end %>
